@@ -1,1 +1,25 @@
-LIST COMPONENT
+<h1>List of all posts</h1>
+
+<div class="panel panel-default">
+		<div class="panel-heading">
+			Panel heading
+		</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Username</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let person of persons;let i =index">
+					<td>{{i}}</td>
+					<td>{{person.firstName}}</td>
+					<td>{{person.lastname}} </td>
+					<td>{{person.username}} </td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
