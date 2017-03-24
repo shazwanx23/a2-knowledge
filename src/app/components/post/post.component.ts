@@ -24,5 +24,9 @@ export class PostComponent{
 			this.posts = res;
 		});
 	}
+
+	deletePost(id:any){
+		this.posts.splice(id,1);
+	}
 	
 }
