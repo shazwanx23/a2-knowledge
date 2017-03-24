@@ -13,6 +13,7 @@ interface Person{
 })
 export class ListComponent{
 	persons : Person[];
+	newPerson: Person;
 
 	constructor() {
 		this.persons = [
@@ -20,5 +21,14 @@ export class ListComponent{
 			{firstName: 'shazwan1', lastname:  'shah1', username: 'shazwanshah1'},
 			{firstName: 'shazwan2', lastname:  'shah2', username: 'shazwanshah2'},			
 		];
+	}
+
+	onSubmit(first: HTMLInputElement, last: HTMLInputElement, user: HTMLInputElement) {
+		this.newPerson = {
+			firstName: first.value,
+			lastname: last.value,
+			username: user.value
+		}
+		 this.persons.push(this.newPerson);
 	}
 }
