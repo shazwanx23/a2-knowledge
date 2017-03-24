@@ -17,6 +17,9 @@ export class PostComponent{
 		this._postService.getPosts()
 			.subscribe(res => {
 			this.posts = res;
+			if(this.posts.length > 20) {
+				this.posts.splice(20,80);
+			}
 		});
 	}
 
