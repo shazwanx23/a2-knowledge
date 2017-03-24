@@ -15,4 +15,9 @@ export class PostService {
 							.map(res => res.json());	
 	}
 
+	getPost(id: Number){
+		return this.http.get('https://jsonplaceholder.typicode.com/posts/' + id)
+						.map(res => res.json());
+	}
+
 }

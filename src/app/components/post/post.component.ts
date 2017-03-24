@@ -1,14 +1,9 @@
 import { Component } from '@angular/core';
 
+import { Post } from '../../../post';
 import { PostService } from '../../services/post/post.service';
 
 
-interface Post{
-	userId: string,
-	id: string,
-	title: string,
-	body: string
-}
 
 @Component({
 	moduleId: module.id,

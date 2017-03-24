@@ -9,6 +9,7 @@ import { HomeComponent }  from './components/home/home.component';
 import { ListComponent }  from './components/list/list.component';
 import { ViewComponent }  from './components/view/view.component';
 import { PostComponent }  from './components/post/post.component';
+import { ViewPostComponent }  from './components/view-post/view-post.component';
 
 import { PostService } from './services/post/post.service';
 
@@ -24,6 +25,9 @@ const routes: Routes = [
 	},
 	{
 		path: 'post', component: PostComponent
+	},
+	{
+		path: 'post/:id', component: ViewPostComponent
 	}
 ]
 
@@ -37,7 +41,8 @@ const routes: Routes = [
   				  HomeComponent,
   				  ListComponent,
   				  ViewComponent,
-  				  PostComponent ],
+  				  PostComponent,
+  				  ViewPostComponent ],
   providers: [PostService],
   bootstrap:    [ AppComponent ]
 })
