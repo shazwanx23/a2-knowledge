@@ -7,6 +7,9 @@ import { AppComponent }  from './app.component';
 import { HomeComponent }  from './components/home/home.component';
 import { ListComponent }  from './components/list/list.component';
 import { ViewComponent }  from './components/view/view.component';
+import { PostComponent }  from './components/post/post.component';
+
+import { PostService } from './services/post/post.service';
 
 const routes: Routes = [
 	{
@@ -17,6 +20,9 @@ const routes: Routes = [
 	},
 	{
 		path: 'view', component: ViewComponent
+	},
+	{
+		path: 'post', component: PostComponent
 	}
 ]
 
@@ -28,7 +34,9 @@ const routes: Routes = [
   declarations: [ AppComponent,
   				  HomeComponent,
   				  ListComponent,
-  				  ViewComponent ],
+  				  ViewComponent,
+  				  PostComponent ],
+  providers: [PostService],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
